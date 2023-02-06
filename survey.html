@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="survey.css">
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,200;0,12..72,500;0,12..72,800;1,12..72,200;1,12..72,500;1,12..72,800&display=swap"
+            rel="stylesheet">
+        <title>World of Warcraft Survey</title>
+        
+    </head>
+
+    <body>
+        <div class="container">
+            <header class="header">
+                    <h1 id='title'>World Of Warcraft Survey Form</h1>
+                    <p id='description'> Thank you for taking the time to give us your feedback</p>
+            </header>
+            
+                    <form class="form" id='survey-form' action='' method="GET">
+                            <section class='columns personal-info'>
+                                    <label id='name-label' for="name">Your Full Name:</label>
+                                    <input type='text' id='name' placeholder='e.g. John' name='name' required>
+            
+            
+            
+                                    <label id='email-label' for="email">Your Email Address:</label>
+                                    <input type='email' id='email' placeholder='user@domain.tld' name='email' required>
+            
+                                    <label id='number-label' for="number">Your Age:</label>
+                                    <input type='number' id='number' min='1' max='120' placeholder='ex: 30' name='age'>
+                            </section>
+                            <section>
+                                <fieldset>
+                                        <h2 class="section-title">What is your favorite World of Warcraft expansion?</h2>
+                                        <select id='dropdown' name='favExpansion' required="required">
+                                            <option disabled='' value='' selected="">(Select an option)</option>
+                                            <option value="classic">Classic</option>
+                                            <option value="theBurningCrusade">The Burning Crusade</option>
+                                            <option value="wotlk">WOTLK</option>
+                                            <!-- how to add this to work -->
+                                            <!-- <option>(other) Please specify:<input type='text'></option> -->
+                                        </select>
+                                </fieldset>
+                                <fieldset class="columns">
+                                        <h2 class="section-title">Which fraction do you play?</h2>
+                                            <label class=' label-pad' for='horde'>
+                                            <input type='radio' id='horde' name='fraction' value='horde' required> For the Horde</label>
+                                            <label class='label-pad' for='alliance'>
+                                            <input type='radio' id='alliance' name='fraction' value='alliance'> For the Alliance</label>
+                                </fieldset>
+                                <fieldset>
+                                        <h2 class="section-title">What is your main character?</h2>
+                                        <select id="mainCharacter" name="mainCharacter" required="required">
+                                            <option disabled='' value="" selected="">(Select an option)</option>
+                                            <option value="warrior">RAAAAAGE!!!!</option>
+                                            <option value="paladin">Justice for the unjust!</option>
+                                            <option value="hunter">Where is my pet?</option>
+                                            <option value="rogue">I just do it from behind.</option>
+                                            <option value="priest">Faith before everything else...</option>
+                                            <option value="shaman">Storm, earth, and fire! Heed my call!</option>
+                                            <option value="mage">Just sheep if there is trouble.</option>
+                                            <option value="warlock">Fel magic FTW!</option>
+                                            <option value="monk">The weaponless warrior</option>
+                                            <option value="druid">The master shapeshifter I am.</option>
+                                            <option value="demonHunter">You are not prepared.</option>
+                                            <option value="deathKnight">"I find your excess of resistance disturbing!"</option>
+                                        </select>
+                                </fieldset>
+                            </section>
+                            <section class="columns">
+                                <h2 class="section-title">Select all that applies to you: </h2>
+                                    <label class='label-pad' for='newCharLevel'>
+                                        <input  class='input-gap' type='checkbox' id='newCharLevel' name='newCharLevel' value='yes'> I would level a character again from the zero.</label>
+                                    <label class='label-pad' for='vanillaServers'>
+                                        <input  class='input-gap' type='checkbox' id='vanillaServers' name="vanillaServers" value='yes'> I would play on vanilla servers.</label>
+                                    <label class='label-pad' for='tolwe'>
+                                        <input  class='input-gap' type='checkbox' id='tolwe' name="tolwe" value='yes'> "I be Tolwe. Job be to keep da peace an' watch. So I be watchin'."</label>
+                                    <label class='label-pad' for='murloc'>
+                                        <input class='input-gap'  type='checkbox' id='murloc' name="murlocIAm" value='yes'> Do you "Aaaaaughibbrgubugbugrguburgle!"? </label>
+                            </section>
+                            <section>
+                                <h2 class="section-title">Share your favorite WoW moment with us: </h2>
+                                <textarea class="yourInput" id='story' rows='5' cols='50' placeholder="Enter your comment here..."></textarea>
+                            </section>
+                            <section>
+                                <button class='btn submit' type='submit' id='submit'>Submit</button>
+            
+                            </section>
+                            <button class='btn reset' type='reset' id='reset'>Reset form</button>
+                    </form>
+            
+        </div>
+    </body>
+</html>

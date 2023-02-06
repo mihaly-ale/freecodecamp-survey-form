@@ -1,0 +1,259 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+
+  padding: 0;
+}
+
+html {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 62.5%;
+  color: white;
+}
+
+body {
+  background-position: center;
+  background-size: cover;
+  background-image:
+  linear-gradient(to right, #db4422aa, #456693aa),
+  url(https://www.wallpaperflare.com/static/786/474/382/world-of-warcraft-horde-tooth-digital-wallpaper.jpg);
+  overflow-x: hidden;
+}
+
+.container {
+  width: 85vw;
+  max-width: 950px;
+  margin-block: 3rem 3rem;
+  margin-inline: auto; 
+  background: linear-gradient(to left, #db4422aa, #456693aa);
+  box-shadow: 0 0 5px 1px #e2a522;
+  padding-bottom:1px;
+}
+
+
+
+/* ==================== */
+/* == FLEXBOX == */
+/* ==================== */
+
+.columns {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==================== */
+/* == HEADER == */
+/* ==================== */
+
+.header {
+  padding-top:2rem;
+  margin-bottom: 3em;
+  text-align: center;
+  padding-bottom: 2em;
+}
+
+/* horizontal rule replacement */
+header::after {
+  content: ''; 
+  display:inline-block;
+  width: 25vw; 
+  height:1px;
+  background-color: #e2a522;
+  position: relative;
+  bottom: -40px;  
+}
+
+h1 {
+  font-family: Texturina;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.header p {
+  font-size: 1.25rem;
+  font-style: italic;
+}
+
+
+
+/* ==================== */
+/* == FORM == */
+/* ==================== */
+
+.form {
+  margin-inline: 5rem;    
+}
+
+section {
+  margin-bottom: 3rem; 
+  padding-bottom: 2rem;
+}
+
+/* horizontal rule replacement */ 
+section:not(:last-of-type) {
+border-bottom: 1px solid #e2a522;
+}
+
+/* --------------------------------------------------------------- */
+/* Tried multiple times with pseudo class ::after, but either is not rendering after each section OR having struggle to angle with relative position and appropiate properties
+
+In the end set border-bottom for sections, without able to shorten it.
+
+section::after {
+  content: ''; 
+  border-bottom: 5px solid black;
+  z-index: 1;
+  position: relative;
+  top: 0px;
+} */
+/* --------------------------------------------------------------- */
+
+
+/* to prevent "horizontal rule replacement" vertical misalignment  */
+.personal-info input:not(:last-of-type) {
+  margin-bottom: 1rem;
+} 
+
+fieldset {
+    border: none;;
+}
+
+/* personal info section font size */
+label[id*='label'] {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+/* to prevent "horizontal rule replacement" vertical misalignment  */
+section fieldset:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  background-color: white;
+  font-size: 1.25rem;
+  padding-inline: 0.25em;
+  padding-block: 0.5rem;
+  border-radius: 5px; 
+  border: 2px solid #e2a522;
+  transition: box-shadow 150ms ease-in-out;
+}
+
+/* for radio buttons and checkboxes inline position*/
+input {
+  width: unset;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 0;
+  box-shadow: 0 0 2px 2px #e2a522;
+}
+
+/* checkboxes and radio buttons font-size  */
+label {  
+  font-size: 1rem;
+}
+
+/* increased label padding around checkboxes and radio buttons */
+.label-pad {
+padding: 5px;
+}
+
+
+
+/* ==================== */
+/* == BUTTON == */
+/* ==================== */
+
+.btn {
+  display: block;   
+  cursor: pointer; 
+  border: none;
+  border-radius: 5px;  
+}
+
+.submit {
+  width: 75%;
+  margin-inline: auto; 
+  font-size: 2rem;
+  font-family: Texturina;
+  color: inherit;
+  letter-spacing: 2px; 
+  vertical-align: middle; 
+  background-color:#e26f22;  
+  border: 1px solid orangered;
+}
+
+.submit:focus, .submit:hover {
+  border: 1px solid white;
+  outline: 2px solid white;
+  outline-offset: -5px;
+}
+
+.reset {  
+   width: 15ch;
+   text-transform: capitalize;
+   margin-right: 1rem;
+   margin-left: auto;
+   margin-bottom: 1rem;
+} 
+
+
+
+/* ==================== */
+/* MEDIA QUERIES  */
+/* ==================== */
+
+@media (min-width: 920px) {
+  h1 {
+    font-size: 3rem;
+  }    
+
+  .header p,
+  label[id*='label'],
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 1.5rem;
+  }
+
+  label {
+    font-size: 1.25rem;
+  }
+
+  .submit {
+    font-size: 2.5rem;
+  }
+}
+
+
+
+
+/* to review
+center pseudo::afer elements
+uniform tickboxes cross-browser 
+add writeable option for dropdown: "please specify: ...."
+
+moral of the story:
+                    *css variables to use
+                    *add classes for easier targetting in CSS
+                    *whitespace do exist
+                    *start mobile-first
+ */
