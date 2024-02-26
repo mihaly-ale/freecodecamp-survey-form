@@ -1,3 +1,5 @@
 # Survey Form
 
-First project of the (New) Repsonsive Web Design on freecodecamp.org.
+First project of the (New) Responsive Web Design on freecodecamp.org.
+
+Live: https://mihaly-ale.github.io/freecodecamp-survey-form/
